@@ -1,0 +1,22 @@
+
+
+:root {
+    --white-color:#fafafa; 
+    --white-color-rgb:250,250,250;
+    --white-color-darker:#bababa;
+
+    --p-font-family: 'Montserrat', Roboto, Arial, sans-serif;
+}
+
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+    font-family: var(--p-font-family);
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    background-color: var(--white-color);
+    line-height: 1.675;
+}
