@@ -45,16 +45,17 @@ const Home = () => {
         <section className="bg-white">
             <div className="container">   
                 <div className="row anim_fadeInUp">
-                    <div className="col">
-                        <h2 className="mb-5 color-red">Tech Stack</h2>
-                        <img src={icons}/>
-                        <Link className="btn btn-red mt-5" to="/projects">Explore projects <i className="bi bi-chevron-double-right"></i></Link>
-                    </div>
                     <div className="col text-center">
                         <img src={pc} className="w-75" style={{ 
                                     filter: "drop-shadow(0 .5rem .5rem rgba(0,0,0,.4))"
                                 }} />
                     </div>
+                    <div className="col">
+                        <h2 className="mb-5 color-red">Tech Stack</h2>
+                        <img src={icons}/>
+                        <Link className="btn btn-red mt-5" to="/projects">Explore projects <i className="bi bi-chevron-double-right"></i></Link>
+                    </div>
+                    
                 </div>     
             </div>
         </section>
