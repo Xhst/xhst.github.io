@@ -157,13 +157,13 @@ const Projects = () => {
 
             <section className="bg-white">
                 <div className="container py-5">
-                    <div className="row row-cols-1 row-cols-md-2 g-5 anim_fadeInUp card-group">
+                    <div className="row row-cols-1 row-cols-md-2 g-5 card-group">
                         {repositories.map((repo: any) => (
                             // skip repository without description and the one with the same name as the username
                             !repo.name || repo.name === GITHUB_USERNAME ||
                             !repo.description ? null :
                             // render repository card
-                            <div className="col" key={repo.id}>
+                            <div className="col anim_fadeInUp" key={repo.id}>
                                 <div className="card h-100 border-0 shadow">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="color-green card-img-top" style={{ marginBottom: '-40px' }}>
                                     <path d={getRandomPath()} />
