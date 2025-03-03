@@ -53,28 +53,13 @@
       return;
     }
 
-    $(".anim_fadeInLeft").addClass("reveal").viewportChecker({
-      classToAdd: 'animate__animated animate__fadeInLeft',
-      classToRemove: 'reveal anim_fadeInLeft',
-      offset: "50%"
-    });
-
-    $(".anim_fadeInRight").addClass("reveal").viewportChecker({
-      classToAdd: 'animate__animated animate__fadeInRight',
-      classToRemove: 'reveal anim_fadeInRight',
-      offset: "50%"
-    });
-
-    $(".anim_fadeInUp").addClass("reveal").viewportChecker({
-      classToAdd: 'animate__animated animate__fadeInUp',
-      classToRemove: 'reveal anim_fadeInUp',
-      offset: "50%"
-    });
-
-    $(".anim_zoomIn").addClass("reveal").viewportChecker({
-      classToAdd: 'animate__animated animate__zoomIn',
-      classToRemove: 'reveal anim_zoomIn',
-      offset: "50%"
+    $(".anim_fadeInUp").each(function() {
+        var element = $(this);
+        element.addClass("reveal").viewportChecker({
+            classToAdd: 'animate__animated animate__fadeInUp',
+            classToRemove: 'reveal ' + element.attr('class').split(' ').filter(c => c.startsWith('anim_fadeIn') || c.startsWith('anim_zoomIn')).join(' '),
+            offset: element.height() * 0.2
+        });
     });
 
     let $nav = $('.d-main-nav');
