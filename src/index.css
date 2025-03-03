@@ -86,13 +86,13 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 7.5rem;
+  font-size: min(26vw, 7.5rem);
 }
 h2 {
-  font-size: 6.5rem;
+  font-size: min(22vw, 6.5rem);
 }
 h3 {
-  font-size: 3rem;
+  font-size: min(18vw, 3rem);
 }
 
 .color-red {

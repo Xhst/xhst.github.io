@@ -22,10 +22,10 @@ const Home = () => {
                             find efficient solutions.
                         </p>
                         <div className="justify-content-end">
-                            <a target="_blank" href="https://github.com/Xhst" className="me-5"><i className="bi bi-github"></i></a>
-                            <a target="_blank" href="https://discord.gg/J6RfwrnYfA" className="me-5"><i className="bi bi-discord"></i></a>
-                            <a target="_blank" href="https://www.linkedin.com/in/mattia-micaloni/" className="me-5"><i className="bi bi-linkedin"></i></a>
-                            <a href="mailto:xhstmtt@gmail.com" className="me-5"><i className="bi bi-envelope-fill"></i></a>
+                            <a target="_blank" href="https://github.com/Xhst" className="me-4 me-md-5"><i className="bi bi-github"></i></a>
+                            <a target="_blank" href="https://discord.gg/J6RfwrnYfA" className="me-4 me-md-5"><i className="bi bi-discord"></i></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/mattia-micaloni/" className="me-4 me-md-5"><i className="bi bi-linkedin"></i></a>
+                            <a href="mailto:xhstmtt@gmail.com" className="me-4 me-md-5"><i className="bi bi-envelope-fill"></i></a>
                         </div>
                     </div>
                     <div className="w-100 text-center anim_fadeInUp">
@@ -64,7 +64,9 @@ const Home = () => {
                     </div>
                     <div className="col" style={{ position: "relative" }}>
                         <h2 className="mb-5 color-red">Tech Stack</h2>
-                        <img src={icons}/>
+                        <img src={icons} style={{
+                            maxWidth: "100%",
+                        }}/>
                         <Link className="btn btn-red mt-5" to="/projects">Explore projects <i className="bi bi-chevron-double-right"></i></Link>
                     </div>
                     
