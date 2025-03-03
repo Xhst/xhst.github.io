@@ -122,16 +122,12 @@ const Projects = () => {
         return paths[randomIndex];
     };
 
-    if (loading) {
-        return <div>Caricamento...</div>; // Mostra un messaggio di caricamento
-    }
-
     return (
         <>
             <section className="rg-g">
             <div className="container">
                 <div className="d-flex">
-                    <div className="d-transp-box flex-shrink-1 anim_fadeInUp">
+                    <div className="d-transp-box flex-shrink-1">
                         <h1>Projects</h1>
                     </div>
                     <div className="w-100 text-center anim_fadeInUp">
@@ -139,7 +135,7 @@ const Projects = () => {
                             src={projects} 
                             alt="Projects" 
                             style={{ 
-                                filter: "drop-shadow(0 1rem 10rem rgba(0,0,0,.8))",
+                                filter: "drop-shadow(0 1rem 2rem rgba(0,0,0,.8))",
                                 margin: "-150px -150px",
                                 position: "absolute",
                                 zIndex: -1
@@ -156,6 +152,14 @@ const Projects = () => {
         </section>
 
             <section className="bg-white">
+                {loading && (
+                    <div className="text-center py-5">
+                        <div className="spinner-border text-red" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                )}
+                {!loading && (
                 <div className="container py-5">
                     <div className="row row-cols-1 row-cols-md-2 g-5 card-group">
                         {repositories.map((repo: any) => (
@@ -163,7 +167,7 @@ const Projects = () => {
                             !repo.name || repo.name === GITHUB_USERNAME ||
                             !repo.description ? null :
                             // render repository card
-                            <div className="col anim_fadeInUp" key={repo.id}>
+                            <div className="col" key={repo.id}>
                                 <div className="card h-100 border-0 shadow">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="color-green card-img-top" style={{ marginBottom: '-40px' }}>
                                     <path d={getRandomPath()} />
@@ -201,6 +205,7 @@ const Projects = () => {
                         ))}
                     </div>
                 </div>
+            )}
             </section>
         </>
     );
