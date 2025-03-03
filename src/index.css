@@ -95,12 +95,14 @@ h3 {
   --p-heading-color: var(--red-color);
   --p-heading-color-darker: var(--red-color-darker);
   color: var(--red-color);
+  fill: var(--red-color);
 }
 
 .color-green {
   --p-heading-color: var(--green-color);
   --p-heading-color-darker: var(--green-color-darker);
   color: var(--green-color);
+  fill: var(--green-color);
 }
 
 
