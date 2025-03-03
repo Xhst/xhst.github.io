@@ -127,7 +127,11 @@ const Projects = () => {
             <section className="rg-g">
             <div className="container">
                 <div className="d-flex">
-                    <div className="d-transp-box flex-shrink-1">
+                    <div className="d-transp-box flex-shrink-1"
+                        style={{
+                            zIndex: 1,
+                            position: "relative"
+                        }}>
                         <h1>Projects</h1>
                     </div>
                     <div className="w-100 text-center anim_fadeInUp">
@@ -135,10 +139,10 @@ const Projects = () => {
                             src={projects} 
                             alt="Projects" 
                             style={{ 
-                                filter: "drop-shadow(0 1rem 2rem rgba(0,0,0,.8))",
-                                margin: "-150px -150px",
+                                filter: "drop-shadow(0 1rem 10rem rgba(0,0,0,.8))",
+                                margin: "-150px -200px",
                                 position: "absolute",
-                                zIndex: -1
+                                zIndex: 0
                             }} 
                         />
                     </div>
@@ -191,11 +195,11 @@ const Projects = () => {
                                         )}
                                     </div>
                                     <div className="card-footer mb-2" style={{ backgroundColor: 'transparent', border: 'none' }}>
-                                        <a href={repo.html_url} className="btn btn-red" target="_blank" rel="noopener noreferrer">
+                                        <a href={repo.html_url} className="btn btn-red mt-2" target="_blank" rel="noopener noreferrer">
                                         <i className="bi bi-github"></i> View project <i className="bi bi-chevron-double-right"></i>
                                         </a>
                                         {repo.homepage && (
-                                            <a href={repo.homepage} className="btn btn-green ms-2" target="_blank" rel="noopener noreferrer">
+                                            <a href={repo.homepage} className="btn btn-green ms-2 mt-2" target="_blank" rel="noopener noreferrer">
                                                 <i className="bi bi-star-fill"></i> Demo <i className="bi bi-chevron-double-right"></i>
                                             </a>
                                         )}

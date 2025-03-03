@@ -9,7 +9,11 @@ const Home = () => {
         <section className="rg-g">
             <div className="container">
                 <div className="d-flex">
-                    <div className="d-transp-box flex-shrink-1 anim_fadeInUp">
+                    <div className="d-transp-box flex-shrink-1 anim_fadeInUp"
+                        style={{
+                            zIndex: 1,
+                            position: "relative"
+                        }}>
                         <h1>Xhst</h1>
                         <p className="my-4 justify-content-center text-justify">
                             Hello! I'm Mattia (aka Xhst). I'm passionate about computer science, which I started studying self-taught at the age of 12 and then deepened with university studies.
@@ -30,7 +34,9 @@ const Home = () => {
                             alt="Planet" 
                             style={{ 
                                 filter: "drop-shadow(0 1rem 10rem rgba(0,0,0,.8))",
-                                marginTop: "-80px"
+                                margin: "-80px -150px",
+                                position: "absolute",
+                                zIndex: 0
                             }} 
                         />
                     </div>
@@ -45,12 +51,18 @@ const Home = () => {
         <section className="bg-white">
             <div className="container">   
                 <div className="row anim_fadeInUp">
-                    <div className="col text-center">
-                        <img src={pc} className="w-75" style={{ 
-                                    filter: "drop-shadow(0 .5rem .5rem rgba(0,0,0,.4))"
-                                }} />
+                    <div className="col text-center d-none d-lg-block" style={{ position: "relative" }}>
+                    <img src={pc} style={{ 
+                            filter: "drop-shadow(0 .5rem .5rem rgba(0,0,0,.4))",
+                            position: "absolute",
+                            width: "calc(25rem + 2vw)",
+                            objectFit: "fill",
+                            left: "calc(-80px + 2vw)",
+                            top:0,
+                            zIndex: 1
+                        }} />
                     </div>
-                    <div className="col">
+                    <div className="col" style={{ position: "relative" }}>
                         <h2 className="mb-5 color-red">Tech Stack</h2>
                         <img src={icons}/>
                         <Link className="btn btn-red mt-5" to="/projects">Explore projects <i className="bi bi-chevron-double-right"></i></Link>
