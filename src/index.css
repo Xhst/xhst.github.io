@@ -39,6 +39,10 @@
   src: url(./assets/font/Anton.ttf);
 }
 
+* {
+  overflow-x: hidden;
+}
+
 *::selection {
   color: var(--white-color);
   background-color: var(--red-color);
