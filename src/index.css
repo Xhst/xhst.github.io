@@ -39,7 +39,7 @@
   src: url(./assets/font/Anton.ttf);
 }
 
-* {
+body, section {
   overflow-x: hidden;
 }
 
