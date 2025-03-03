@@ -1,17 +1,13 @@
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import logo from "./assets/images/infty.svg";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
 
 const Navbar = () => {
-  const location = useLocation(); 
-
-  let navClassName = "navbar navbar-expand-md fixed-top d-main-nav ";
-  navClassName += location.pathname === "/" ? "d-tgbg" : "";
 
   return (
-    <nav className={navClassName}>
+    <nav className="navbar navbar-expand-md fixed-top d-main-nav d-tgbg">
       <div className="container-fluid px-4">
         <Link className="navbar-brand" to="/">
           <img src={logo} alt="Logo" />
