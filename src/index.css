@@ -46,6 +46,10 @@ body, section {
   overflow-x: hidden;
 }
 
+section {
+  overflow-y: hidden;
+}
+
 *::selection {
   color: var(--white-color);
   background-color: var(--red-color);
