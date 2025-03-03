@@ -186,8 +186,8 @@ const Projects = () => {
                                             </div>
                                         )}
                                     </div>
-                                    <div className="card-footer" style={{ backgroundColor: 'transparent', border: 'none' }}>
-                                        <a href={repo.html_url} className="btn btn-red mb-2" target="_blank" rel="noopener noreferrer">
+                                    <div className="card-footer mb-2" style={{ backgroundColor: 'transparent', border: 'none' }}>
+                                        <a href={repo.html_url} className="btn btn-red" target="_blank" rel="noopener noreferrer">
                                         <i className="bi bi-github"></i> View project <i className="bi bi-chevron-double-right"></i>
                                         </a>
                                         {repo.homepage && (
