@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
-import "./App.css";
 import logo from "./assets/images/infty.svg";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
