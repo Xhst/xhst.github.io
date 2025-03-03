@@ -165,7 +165,7 @@ const Projects = () => {
                 )}
                 {!loading && (
                 <div className="container py-5">
-                    <div className="row row-cols-1 row-cols-md-2 g-5 card-group">
+                    <div className="row row-cols-1 row-cols-lg-2 g-5 card-group">
                         {repositories.map((repo: any) => (
                             // skip repository without description and the one with the same name as the username
                             !repo.name || repo.name === GITHUB_USERNAME ||
