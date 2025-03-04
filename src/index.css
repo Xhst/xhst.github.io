@@ -68,6 +68,10 @@ body {
   line-height: 1.675;
 }
 
+.form-control:focus {   
+  border-color: var(--red-color)!important;
+  box-shadow: 0 0 8px rgba(255,255,255,.075),inset 0 0 4px rgba(var(--red-color-rgb),1);
+}
 .bg-red {
   background-color: var(--red-color)!important;
 }
