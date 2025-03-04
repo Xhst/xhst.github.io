@@ -2,11 +2,10 @@ import planet from '../assets/images/planet.png'
 import pc from '../assets/images/pc.png'
 import icons from '../assets/images/icons.svg'
 import about from '../assets/images/about.png'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ContactForm from '../components/ContactForm';
 
 const Home = () => {
-    const navigate = useNavigate();
 
     return (
         <>
